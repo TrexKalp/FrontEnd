@@ -66,7 +66,7 @@ export default function Claim() {
       <Container
         as={SimpleGrid}
         maxW={"7xl"}
-        columns={{ base: 1, md: 2 }}
+        columns={{ base: 1, sm: 1, md: 2 }} // make sure the base and sm are set to 1
         spacing={{ base: 10, lg: 32 }}
         py={{ base: 10, sm: 20, lg: 32 }}
       >

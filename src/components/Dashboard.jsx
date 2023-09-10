@@ -8,6 +8,7 @@ import {
   VStack,
   Icon,
   useColorModeValue,
+  useBreakpointValue,
   Text,
   Drawer,
   DrawerContent,
@@ -130,6 +131,7 @@ const MobileNav = ({ onOpen, setShowSimpleCard, ...rest }) => {
   const savedFirstName = localStorage.getItem("firstName");
   const savedLastName = localStorage.getItem("lastName");
   const [tokens, setTokens] = useState(localStorage.getItem("points") || 0);
+  const label = useBreakpointValue({ base: "TTs", md: "TamuTokens" });
 
   useEffect(() => {
     const checkForTokenUpdates = setInterval(() => {
@@ -164,7 +166,7 @@ const MobileNav = ({ onOpen, setShowSimpleCard, ...rest }) => {
 
       <Heading
         display={{ base: "flex", md: "none" }}
-        fontSize={"xl"}
+        fontSize={{ base: "sm", md: "xl" }}
         fontFamily="'Pacifico', cursive"
         textShadow="
         -1px -1px 0 #000,  
@@ -177,7 +179,11 @@ const MobileNav = ({ onOpen, setShowSimpleCard, ...rest }) => {
       </Heading>
 
       <HStack spacing={{ base: "0", md: "4" }}>
-        <Tag size="lg" colorScheme="red" borderRadius="full">
+        <Tag
+          size={{ base: "sm", md: "lg" }}
+          colorScheme="red"
+          borderRadius="full"
+        >
           <Avatar
             src="https://thefan-brand.com/cdn/shop/products/texas-am-aggies-modern-disc-wall-sign-525895.jpg?v=1644363931"
             size="xs"
@@ -185,7 +191,9 @@ const MobileNav = ({ onOpen, setShowSimpleCard, ...rest }) => {
             ml={-1}
             mr={2}
           />
-          <TagLabel>TamuTokens: {tokens || 0} </TagLabel>
+          <TagLabel>
+            {label}: {tokens || 0}{" "}
+          </TagLabel>
         </Tag>
         <DarkModeSwitch />
 

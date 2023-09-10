@@ -247,7 +247,7 @@ export default function Shop({}) {
           />
         </>
       ) : (
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={10}>
+        <SimpleGrid columns={{ base: 1, sm: 2, md: 2, lg: 3 }} spacing={10}>
           {products.map((product, index) => (
             <Box
               key={index}
@@ -329,7 +329,7 @@ export default function Shop({}) {
                 borderRadius="full"
                 mt={4}
               />
-              {(points / product.price) * 100 > 100 && (
+              {(points / product.price) * 100 >= 100 && (
                 <Center mt={4}>
                   <Button
                     colorScheme="maroon"
