@@ -68,7 +68,11 @@ const Upload = () => {
       reader.onloadend = () => {
         setSelectedImage(reader.result);
         setUploadedImages((prevImages) => {
-          const newImages = [...prevImages, reader.result];
+          let newImages = [...prevImages, reader.result];
+          if (newImages.length > 2) {
+            // Check if there are more than 2 images
+            newImages.shift(); // Remove the oldest image
+          }
           localStorage.setItem("uploadedImages", JSON.stringify(newImages));
           return newImages;
         });
@@ -152,7 +156,7 @@ const Upload = () => {
           </Text>
         </Box>
       </Flex>
-      <VStack spacing={2} mt={8}>
+      <VStack spacing={2}>
         <HStack spacing={4} mt={8} overflowX="auto">
           {uploadedImages.map((imageSrc, idx) => (
             <Box

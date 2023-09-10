@@ -12,6 +12,7 @@ import {
   Text,
   useColorModeValue,
   Link,
+  Image,
 } from "@chakra-ui/react";
 import Dashboard from "./Dashboard";
 
@@ -55,6 +56,13 @@ export default function SimpleCard({ switchToSignup, onLogin }) {
     >
       <Stack spacing={8} mx={"auto"} maxW={"xl"} py={12} px={6}>
         <Stack align={"center"}>
+          <Image
+            src="https://i.ibb.co/JnVqMs6/Rev-Rewards-1.png"
+            borderRadius="50%"
+            height="100px"
+            border="3px solid black" // Added this line
+          />
+
           <Heading
             fontSize={"6xl"}
             textAlign="center"
