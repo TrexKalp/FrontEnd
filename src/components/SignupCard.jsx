@@ -15,6 +15,7 @@ import {
   Text,
   Link,
   useColorModeValue,
+  Image,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
@@ -53,6 +54,12 @@ export default function SignupCard({ switchToLogin, onRegister }) {
       >
         <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>
+            <Image
+              src="https://i.ibb.co/JnVqMs6/Rev-Rewards-1.png"
+              borderRadius="50%"
+              height="100px"
+              border="3px solid black" // Added this line
+            />
             <Heading
               fontSize={"6xl"}
               textAlign="center"
@@ -66,7 +73,7 @@ export default function SignupCard({ switchToLogin, onRegister }) {
             >
               Reveille Rewards
             </Heading>
-            {/* make a slogan that says "shop small score big" */}
+
             <Text
               fontSize={"2xl"}
               color={"white"}
