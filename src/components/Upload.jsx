@@ -69,11 +69,10 @@ const Upload = () => {
         setSelectedImage(reader.result);
         setUploadedImages((prevImages) => {
           let newImages = [...prevImages, reader.result];
-          if (newImages.length > 2) {
+          if (newImages.length > 4) {
             // Check if there are more than 2 images
             newImages.shift(); // Remove the oldest image
           }
-          localStorage.setItem("uploadedImages", JSON.stringify(newImages));
           return newImages;
         });
       };
