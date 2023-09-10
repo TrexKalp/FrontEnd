@@ -185,7 +185,7 @@ const MobileNav = ({ onOpen, setShowSimpleCard, ...rest }) => {
             ml={-1}
             mr={2}
           />
-          <TagLabel>TAMUTokens: {tokens || 0} </TagLabel>
+          <TagLabel>TamuTokens: {tokens || 0} </TagLabel>
         </Tag>
         <DarkModeSwitch />
 

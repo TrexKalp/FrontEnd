@@ -151,7 +151,8 @@ const Upload = () => {
             Using highly-trained optical character recognition (OCR) technology,
             upload your receipts here to extract how much you paid at your local
             small businesses! From there, you gain points that you can use to
-            redeem for Aggie gear!
+            redeem for Aggie gear! Every dollar you spend at a local business
+            equals 1 TamuToken.
           </Text>
         </Box>
       </Flex>
