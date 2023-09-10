@@ -49,7 +49,7 @@ export default function Shop({}) {
 
       // Show a success toast
       toast({
-        title: `You've successfully claimed ${productName}!`,
+        title: `You've successfully claimed this item!`,
         status: "success",
         duration: 3000,
         isClosable: true,
